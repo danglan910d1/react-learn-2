@@ -7,34 +7,22 @@ import Footer from "./containers/Footer";
 
 const itemContent: string[] = [
   "Buy a new gaming laptop",
-  "Complete task",
-  "Swim",
-  "Do exercise",
+  "Complete a previous task",
+  "Create video for youtube",
+  "Create a new pro folio site",
 ];
 
 function App() {
   return (
     <div className="todo">
-      {/* <Vinh /> */}
       <Title></Title>
-
-      {/* Input Search */}
       <div className="container-search">
         <Input></Input>
         <ButtonIcon></ButtonIcon>
       </div>
-
       {itemContent.map((each) => {
         return <Item label={each} />;
       })}
-
-      {/* Content */}
-      {/* <Item label="Buy a new gaming laptop" hiKhoa={123}></Item>
-      <Item label="Complete task" hiKhoa={123}></Item>
-      <Item label="Swim" hiKhoa={123}></Item>
-      <Item label="Do exercise" hiKhoa={123}></Item> */}
-
-      {/* Footer */}
      <Footer />
     </div>
   );

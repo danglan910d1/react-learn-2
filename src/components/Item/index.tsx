@@ -1,15 +1,12 @@
-import "./index.css"
+import {styled} from "@mui/material/styles";
+import MItem, { BoxProps } from "@mui/material";
 
-type ItemPropsAhihi = {
-  label: string;
+const CustomItem = styled(MItem)
+
+interface ItemProps extends BoxProps {}
+
+const Item = (props:ItemProps) => {
+    return <CustomItem {...props}></CustomItem>
 }
-
-const Item = (props: ItemPropsAhihi) => {
-  return (
-    <div className={"item-label"}>
-      {props.label}
-    </div>
-  );
-};
 
 export default Item;
