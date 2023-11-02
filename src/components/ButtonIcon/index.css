@@ -1,0 +1,13 @@
+.button-icon {
+  background: #8E49E8;
+  width: 13%;
+  border: none;
+  border-radius: 4px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.icon-add {
+  color: white;
+  font-weight: bold;
+}
