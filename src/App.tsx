@@ -2,10 +2,7 @@
 import "./App.css";
 import Child1 from "./components/Child1/Childt1.tsx";
 
-//Data => map để truyền title với avatar vào 
-
-
-const arrayItem = [
+const arrayCategories = [
   {
     title: "Thời trang nam",
     avatar:
@@ -34,13 +31,35 @@ const arrayItem = [
   
 ];
 
+const arraySaleCategories = [
+  {
+    title: "Khung Giờ Săn Sale",
+    avatar: "https://cf.shopee.vn/file/e4a404283b3824c211c1549aedd28d5f_xhdpi",
+  },
+  {
+    title: "Miễn Phí Ship - Có Shopee",
+    avatar: "https://cf.shopee.vn/file/vn-50009109-c7a2e1ae720f9704f92f72c9ef1a494a_xhdpi",
+  },
+  {
+    title: "Voucher Giảm Đến 500.000Đ",
+    avatar: "https://cf.shopee.vn/file/vn-50009109-f6c34d719c3e4d33857371458e7a7059_xhdpi",
+  },
+]
+
 function App() {
-  return (
-    <div style={{ display: "flex" }}>
-      {arrayItem.map((each) => {
+  return (<>
+    <div>
+      <div style={{ display: "flex" }}>      
+        {arrayCategories.map((each) => {
         return <Child1 title={each.title} avatar={each.avatar} />;
       })}
-    </div>
+      </div>
+      <div style={{ display: "flex", marginTop: "100px"}}  >
+      {arraySaleCategories.map((each) => {
+        return <Child1 isSmallAvatar={true} title={each.title} avatar={each.avatar} />;
+      })}
+      </div>
+    </div></>
   );
 }
 
